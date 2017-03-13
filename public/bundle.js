@@ -21821,11 +21821,14 @@ var Board = function (_React$Component) {
       console.log('which square', value);
       console.log('player move', move);
       console.log('position', position);
-      if (position.innerHTML !== null) {
-        position.innerHTML = move;
+
+      if (position.innerHTML === "x" || position.innerHTML === "o") {
+        alert('please choose another location');
       } else {
-        alert('cant do that');
+        position.innerHTML = move;
       }
+
+      console.log('value', position.innerHTML === "x");
     }
   }, {
     key: 'render',

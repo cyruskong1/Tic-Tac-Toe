@@ -24,11 +24,14 @@ export default class Board extends React.Component {
     console.log('which square', value)
     console.log('player move', move)
     console.log('position', position)
-    if(position.innerHTML !== null) {
-      position.innerHTML = move;
+
+    if(position.innerHTML === "x" || position.innerHTML === "o" ) {
+      alert('please choose another location')
     } else {
-      alert('cant do that')
+      position.innerHTML = move;
     }
+
+    console.log('value', position.innerHTML === "x")
   }
 
 
@@ -49,7 +52,7 @@ export default class Board extends React.Component {
         </div>
          <div className = "row">
           <Square4 />
-          <Square5/>
+          <Square5 />
           <Square6 />
         </div>
         <div className = "row">
